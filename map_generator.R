@@ -2,6 +2,7 @@
 library(tidyverse)
 library(osmdata)
 
+
 # Conseguir coordenadas para ggplot
 city <- "provincia de santiago"
 country <- "chile"
@@ -42,4 +43,4 @@ ggplot() +
   theme(plot.background = element_rect(fill = "#ffffff"))
 
 # Exportación de mapa
-ggsave("santiago.png", height = 27.9, width = 43.1, dpi = 300, units = "cm")
+ggsave(paste0(city,".png"), height = 27.9, width = 43.1, dpi = 300, units = "cm")
